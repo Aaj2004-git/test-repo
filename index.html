@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aayushi's Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400,600,700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: Poppins, sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(18, 18, 62);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 023px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(153, 153, 226);
+            font-size: 1.01rem;
+        }
+
+        main hr {
+            border: 0;
+            background: #9c97f1;
+            height: 1.2px;
+            margin: 40px 84px;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 140px 0;
+        }
+
+        .firstSection>div {
+            width: 30%;
+        }
+
+        .leftSection {
+            font-size: 3rem;
+            margin: 30px 0;
+        }
+
+        .leftSection .buttons {
+            padding: 50px 0;
+        }
+
+        .leftSection .btn1 {
+            padding: 9px;
+            background: #1e2167;
+            color: white;
+            border: 2px solid white;
+            border-radius: 6px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .rightSection img {
+            width: 80%;
+        }
+
+        .purple {
+            color: rgb(138, 43, 226);
+        }
+
+        .text-gray {
+            color: gray;
+        }
+
+        #element {
+            color: rgb(138, 43, 226);
+        }
+
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+
+        .secondSection h1 {
+            font-size: 1.9rem;
+        }
+
+        .secondSection .box {
+            background: white;
+            width: 85vw;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+        }
+
+        .secondSection .vertical {
+            height: 93px;
+            width: 1px;
+            background-color: white;
+            margin: 0 100px;
+        }
+
+        .thirdSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+
+        .thirdSection h1 {
+            font-size: 1.9rem;
+            padding: 30px 0;
+        }
+
+        .fourthSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+
+        .fourthSection h1 {
+            font-size: 1.9rem;
+            padding: 30px 0;
+        }
+
+        .fifthSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+
+        .fifthSection h1 {
+            font-size: 1.9rem;
+            padding: 30px 0;
+        }
+
+        .sixthSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+
+        .sixthSection h1 {
+            font-size: 1.9rem;
+            padding: 30px 0;
+        }
+
+
+
+        .image-top {
+            width: 23px;
+            position: relative;
+            top: -32px;
+            left: -9px;
+        }
+
+        .vertical-title {
+            position: relative;
+            top: 75px;
+            width: 150px;
+        }
+
+        .vertical-desc {
+            position: relative;
+            top: 86px;
+            color: gray;
+            width: 150px;
+            font-size: 9px;
+        }
+
+        .footer {
+            background-color: #0e0e1a;
+            height: 233px;
+        }
+
+        .footer {
+            display: flex;
+            padding: 23px 122px;
+            justify-content: space-evenly;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer>div {
+            width: 223px;
+        }
+
+        footer .footer-rights {
+            text-align: center;
+            color: gray;
+            padding: 12px 0;
+        }
+
+        .tab-titles {
+            display: flex;
+            margin: 20px 0 40px;
+        }
+
+        .tab-links {
+            margin-right: 50px;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .tab-links::after {
+            content: '';
+            width: 0;
+            height: 3px;
+            background: blueviolet;
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            transition: 0.5s;
+        }
+
+        .tab-links.active-links::after {
+            width: 50%;
+        }
+
+        .tab-contents ul li {
+            color: gray;
+            list-style: none;
+            margin: 10px 0;
+        }
+
+        .tab-contents ul li span {
+            color: blueviolet;
+            font-size: 14px;
+        }
+
+        .tab-contents {
+            display: none;
+        }
+
+        .tab-contents.active-tab {
+            display: block;
+        }
+
+        #services {
+            padding: 30px 0;
+        }
+
+        .services-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 40px;
+            margin-top: 50px;
+        }
+
+        .services-list div {
+            background: #262626;
+            padding: 40px;
+            font-size: 13px;
+            font-weight: 300;
+            border-right: 10px;
+            transition: background 0.5s, transform 0.5s;
+        }
+
+        .services-list div h2 {
+            font-size: 30px;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .services-list div a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 12px;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        .services-list div:hover {
+            background: #1e2167;
+            transform: translate(-10px);
+        }
+
+        #portfolio {
+            padding: 50px 0;
+        }
+
+        .work-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 40px;
+            margin-top: 50px;
+        }
+
+        .work {
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .work img {
+            width: 100%;
+            border-radius: 10px;
+            display: block;
+            transition: transform 0.5s;
+        }
+
+        .layer {
+            width: 100%;
+            height: 0;
+            background: linear-gradient(rgba(255, 0, 0, 0), #1e2167);
+            border-radius: 8px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 0 2px;
+            text-align: center;
+            font-size: 14px;
+            transition: 0.5s;
+        }
+
+        .layer h3 {
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .work:hover img {
+            transform: scale(1.1);
+        }
+
+        .work:hover .layer {
+            height: 100%;
+        }
+
+        .btn {
+            display: block;
+            margin: 50px auto;
+            width: fit-content;
+            border: 1px solid #ff004f;
+            padding: 14px 40px;
+            border-radius: 6px;
+            text-decoration: none;
+            color: #fff;
+            transition: background 0.5s;
+        }
+
+        .btn:hover {
+            background: #ff004f;
+        }
+
+        .image-best {
+            width: 23px;
+
+        }
+
+        .contact {
+            flex-basis: 35%;
+        }
+
+        .contact p {
+            margin-top: 80px;
+        }
+
+        .social-icons {
+            margin-top: 30px;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            font-size: 20px;
+            margin-right: 10px;
+            color: #ababab;
+        }
+
+        .contact-well {
+            text-decoration: none;
+            margin-top: 30px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Aayushi's Profile</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Services</a></li>
+                    <li><a href="/">Projects</a></li>
+                    <li><a href="/">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi, My name is <span class="purple">Aayushi</span>
+                <div>and I am a passionate</div>
+                <span id="element"></span>
+
+
+                <div class="buttons">
+                    <button class="btn1">Download Resume</button>
+                    <button class="btn1">Visit Linkedin</button>
+                </div>
+
+            </div>
+            <div class="rightSection">
+                <img src="https://www.pngitem.com/pimgs/b/112-1127587_software-development-png.png">
+            </div>
+        </section>
+
+        <!------------------------ work experience ------------------------>
+        <hr>
+        <section class="secondSection">
+            <span class="text-gray">What I have done so far</span>
+            <h1>Work Experience</h1>
+            <div class="box">
+                <div class="vertical">
+                    <img class="image-top" src="developer.png" alt="">
+                    <div class="vertical-title">
+                        Web Developer(2022-Present)
+                    </div>
+                    <div class="vertical-desc">
+                        Having hands-on experience as a Web Developer, worked on designing and
+                        developing responsive and user-friendly websites, ensuring seamless functionality and optimized
+                        performance
+                        with proficiency in tools like HTML, CSS, JavaScript, and modern frameworks.
+                    </div>
+                </div>
+
+                <div class="vertical">
+                    <img class="image-top" src="java.png" alt="">
+                    <div class="vertical-title">
+                        JAVA Developer(2022-Present)
+                    </div>
+                    <div class="vertical-desc">
+                        Experienced Java Developer skilled in building robust, scalable applications
+                        using core Java. They specialize in back-end development,database integration,
+                        and performance optimization with a focus on clean code and collaboration can
+                        deliver high-quality, efficient software solutions
+                    </div>
+                </div>
+
+                <div class="vertical">
+                    <img class="image-top" src="html.com.png" alt="">
+                    <div class="vertical-title">
+                        HTML Developer(2020-2022)
+                    </div>
+                    <div class="vertical-desc">
+                        Skilled HTML Developer with expertise in creating responsive and user-friendly web pages,
+                        having a strong understanding of HTML, CSS, and JavaScript, focusing on clean, well-structured
+                        code and cross-browser compatibility
+                        with attention to detail and design, can deliver visually appealing and functional web
+                        solutions.
+                    </div>
+                </div>
+
+                <div class="vertical">
+                    <img class="image-top" src="DA.png" alt="">
+                    <div class="vertical-title">
+                        Data Analyst(2022-Present)
+                    </div>
+                    <div class="vertical-desc">
+                        I have a foundational knowledge as a Data Analyst,
+                        with basic skills in data collection, cleaning, and visualization,
+                        also familiar with tools like Python, SQL, and Excel, and have a keen interest in analyzing data
+                        to
+                        uncover patterns and insights.
+                    </div>
+                </div>
+
+                <div class="vertical">
+                    <img class="image-top" src="AI.png" alt="">
+                    <div class="vertical-title">
+                        AI Tools Proficiency(2022-Present)
+                    </div>
+                    <div class="vertical-desc">
+                        Have a foundational proficiency in AI tools, with experience using frameworks like TensorFlow
+                        and scikit-learn
+                        for basic model development also have an understanding of machine learning concepts and are
+                        familiar with creating
+                        predictive models and analyzing datasets.Eager to expand my skills to tackle real world
+                        problems.
+                    </div>
+                </div>
+
+                <div class="vertical">
+                    <img class="image-top" src="sql.png" alt="">
+                    <div class="vertical-title">
+                        SQL Developer(2022-Present)
+                    </div>
+                    <div class="vertical-desc">
+                        Have knowledge as an SQL Developer, with experience in writing queries for data retrieval,
+                        manipulation,
+                        and management and familiar with database concepts like joins, normalization, and constraints,
+                        and have worked on
+                        creating and maintaining database structures, eager to enhance their skills and work on more
+                        complex database solutions.
+
+                    </div>
+                </div>
+
+        </section>
+        <!------------------ About Me  ----- ----------->
+        <hr>
+        <section class="thirdSection">
+            <h1>About Me</h1>
+            <p class="text-gray">
+                I am Aayushi Jaiswal, a Computer Science and Engineering student at SRM University with a passion
+                for Web Development, Machine Learning, and Artificial Intelligence. I have worked on impactful projects
+                like Real Estate Price Prediction and a Hotel Management System, and I am currently researching on
+                Heart Disease Prediction using Deep Learning. I have honed my skills in Python, Java, SQL, Pandas,
+                HTML, CSS, and more. Beyond academics, I enjoy mentoring, organizing workshops, and contributing to
+                social causes. I thrive on solving complex problems and collaborating on innovative solutions
+                that make a difference.Beyond technical skills, I love mentoring others and have facilitated coding
+                workshops
+                for high school students. I actively participate in hackathons and tech expos, showcasing my
+                adaptability and
+                enthusiasm for innovation.In my free time, you will find me exploring new technologies, designing
+                front-end
+                projects like weather apps, or diving into a good book. Feel free to connect with me—I am always eager
+                to learn,
+                grow, and create something extraordinary!
+            </p>
+
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                        <li><span>Web Development</span><br>Web App Development</li>
+                        <li><span>App Development</span><br>Building Android/iOS Apps</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2022-Present</span><br>BTech in CSE at Srm University</li>
+                        <li><span>2021-2022</span><br>Intermediate college</li>
+                        <li><span>2019-2020</span><br>High School</li>
+                    </ul>
+                </div>
+            </div>
+
+            <script>
+
+                var tablinks = document.getElementsByClassName("tab-links");
+                var tabcontents = document.getElementsByClassName("tab-contents");
+
+                function opentab(tabname) {
+                    for (tablink of tablinks) {
+                        tablink.classList.remove("active-link");
+                    }
+                    for (tabcontent of tabcontents) {
+                        tabcontent.classList.remove("active-tab");
+                    }
+                    event.currentTarget.classList.add("active-link");
+                    document.getElementById(tabname).classList.add("active-tab");
+                }
+
+            </script>
+
+
+        </section>
+
+
+
+        <!---------------------- Services ----------------------->
+
+        <hr>
+        <section class="fourthSection">
+            <h1> My Services</h1>
+            <div id="services">
+                <div class="container">
+                    <div class="services-list">
+                        <div>
+                            <h2>Web Design</h2>
+                            <p>
+                                I provide responsive web design, UI/UX design, and e-commerce solutions
+                                tailored to your needs. Using modern tools like HTML, CSS, JavaScript,
+                                and Figma, I create visually stunning, user-friendly, and high-performing
+                                websites. My designs ensure seamless experiences across devices, combining
+                                aesthetics with functionality. Let’s bring your vision to life with creativity and
+                                precision.
+                            </p>
+                            <a href="#">Learn more</a>
+                        </div>
+
+                        <div>
+                            <h2>App Design</h2>
+                            <p>
+                                I specialize in crafting intuitive and visually appealing app designs that enhance
+                                user engagement and satisfaction. From wireframes to high-fidelity prototypes,
+                                I create seamless and user-friendly interfaces tailored to your needs. Using tools
+                                like Figma and Adobe XD, I ensure every design is modern, functional, and optimized
+                                for performance. Let’s bring your app idea to life with creativity and precision.
+                            </p>
+                            <a href="#">Learn more</a>
+                        </div>
+
+                        <div>
+                            <h2>UI/UX Design</h2>
+                            <p>
+                                I specialize in UI/UX design, creating intuitive and visually engaging interfaces
+                                that provide seamless user experiences. From user research and wireframes to interactive
+                                prototypes, I focus on crafting designs that are both functional and aesthetically
+                                pleasing.
+                                Using tools like Figma and Adobe XD, I ensure every element is optimized for usability
+                                and
+                                aligned with your goals. Let’s turn your ideas into exceptional digital experiences.
+                            </p>
+                            <a href="#">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--------------------------- Portfolio  ---------------------------->
+
+        <hr>
+        <section class="fifthSection">
+            <h1> My Projects</h1>
+            <div id="Portfolio">
+                <div class="work-list">
+                    <div class="work">
+                        <img src="st1.png" alt="">
+                        <div class="layer">
+                            <h3>Real Estate Price Prediction</h3>
+                            <p> The project using ML analyzes key features to predict property prices accurately,
+                                aiding buyers and sellers in making informed decisions.</p>
+                        </div>
+                    </div>
+
+                    <div class="work">
+                        <img src="c3.png" alt="">
+                        <div class="layer">
+                            <h3>Hotel Reservation system</h3>
+                            <p>
+                                The dbms project is to develop an efficient and user-friendly database management system
+                                that automates the booking and management of hotel reservations.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="work">
+                        <img src="c1.png" alt="">
+                        <div class="layer">
+                            <h3>Social Media App</h3>
+                            <p>
+                                The App is to create a dynamic platform that enables users to connect, share content,
+                                and engage with others in a seamless and interactive environment.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+
+
+        </section>
+
+        <!------------------------- Contact ---------------------------->
+
+        <hr>
+        <section class="sixthSection">
+
+            <div id="contact">
+                <h1>Contact Me</h1>
+                <p>contact@example.com</p>
+                <div class="contact-well">
+                    <p>Phone:-0123456789</p>
+                </div>
+
+
+                <div class="social-icons">
+
+                    <div class="social-icons">
+
+                        <a href="https://Instagram.com/">
+                            <img class="image-best" src="insta.png" alt="">
+                        </a>
+
+                        <a href="">
+                            <img class="image-best" src="tweet.png" alt="">
+                        </a>
+
+                        <a href="https://facebook.com/">
+                            <img class="image-best" src="fb.png" alt="">
+                        </a>
+
+                        <a href="">
+                            <img class="image-best" src="yt.png" alt="">
+                        </a>
+                    </div>
+                </div>
+        </section>
+
+    </main>
+    <!---------------------- footer ------------------------>
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3>Aayushi's Developer Profile</h3>
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div class="footer-third">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div class="footer-fourth">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-rights">
+            Copyright &#169;www.aayushi'sportfolio.com | All rights reserved
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', 'Graphic Designer', 'Web Designer', 'Video Editor'],
+            typeSpeed: 50,
+        });
+
+
+
+    </script>
+
+
+</body>
+
+</html>
